@@ -20,6 +20,7 @@ int search_list_int(list <int> toScan, int value)
 } 
   
 list< list< int > > myListOfLists; 
+list<int> *mylist = new list<int>[size];
 int main() 
 {   
     list<int> tempList;

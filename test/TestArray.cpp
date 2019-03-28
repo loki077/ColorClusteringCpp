@@ -22,7 +22,7 @@ void append_sub(int location, int value)
 {
     arraySubCounter[location]++;
     re_init();
-    array[location][arraySubCounter[location] - 1] = value;
+    // array[location][arraySubCounter[location] - 1] = 1;
 }
 void append()
 {
@@ -36,6 +36,7 @@ void print()
         for (int z = 0; z < arraySubCounter[i]; z++)
         {
             cout << array[i][z] <<" ";
+            cout << i << " : " << arraySubCounter[i] << endl;
         }
         cout << endl;
     }
