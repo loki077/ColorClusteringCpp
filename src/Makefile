@@ -1,6 +1,26 @@
 all:
 	g++ Main.cpp List2Dynamic.cpp List1Dynamic.cpp ColorClustering.cpp -o output
 
+output: Main.o List1Dynamic.o List2Dynamic.o ColorClustering.o
+	g++ Main.o List1Dynamic.o List2Dynamic.o ColorClustering.o -o bin/output
+
+Main.o: Main.cpp
+	g++ -c Main.cpp
+
+List1Dynamic.o: src/List1Dynamic.cpp src/List1Dynamic.cpp
+	g++ -c src/List1Dynamic.cpp
+
+
+List2Dynamic.o: src/List2Dynamic.cpp src/List2Dynamic.cpp
+	g++ -c src/List2Dynamic.cpp
+
+
+ColorClustering.o: src/ColorClustering.cpp src/ColorClustering.cpp
+	g++ -c include/ColorClustering.cpp
+
+clean:
+	rm *.o bin/output
+
 # TARGET_EXEC ?= a.out
 
 # BUILD_DIR ?= ./build

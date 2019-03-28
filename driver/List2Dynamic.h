@@ -1,4 +1,3 @@
-
 /********************************************************************************************
 Project Name    : List2Dynamic.h     --- 2 Dimensional dynamical Array
 Developer       : Lokesh Ramina
@@ -25,7 +24,7 @@ using namespace std;
 /**
  * @brief      Listoflist is a Class to handle 2 dimensional Dynamic array
  */
-class ListOfList
+class List2D
 {
 	private:
 		int **inputArray;
@@ -36,17 +35,20 @@ class ListOfList
 		int maxSizeOfMainArray 	= 1;
 		int maxSizeOfSubArray 	= 1;
 		void check_size();
+		void init_zero();
 		
 	public:
 		void init(int mainArraySize, int subArraySize);
-		void append_main(int value);
-		void append_current_sub_main(int value);
+		int append(int value);
+		int append(int pointer, int value);
+		void append_current(int value);
 		void print();
 		void free_memory();
 		int find_in_list(int pointer, int value);
-		int append_sub_main(int pointer, int value);
 		int get_value(int pointer, int pointer1);
 		int set_value(int pointer, int pointer1, int value);
+		int len();
+		int len(int pointer);
 };
 
 #endif

@@ -30,18 +30,21 @@ class ColorClustering
 		int  **inputArray;
 		int  **assignArray;
 
-		list <int> resultStringList, resultColorList;
-		list <int> outputColorList;
+		List2D resultList; 
+		List2D resultColorList;
+		List1D outputColorList;
 
-		void create_file(int tempBuffer [], int widthTemp, int heightTemp);
+		void create_file(int tempBuffer [], int heightTemp, int widthTemp);
 		void scan_cluster();
-		// void print_output();
-		// void generate_output_array();
-		// void color_image_output();
+		void print_input();
+		void print_output();
+		void generate_output_array();
+		void color_image_output();
 		void processed_location(int tempX, int tempY);
 		int other_location(int tempX, int tempY);
-		// void insert_match(int value1, int value2);
-		// void insert_new_match(int value1);
+		void insert_match(int value1, int value2);
+		void insert_new_match(int value1);
+		void free_memory();
 };
 
 #endif
