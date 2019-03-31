@@ -18,8 +18,9 @@ Instrution to execute file:
 	To run the code:
 		# cd .../ColorClusteringCPP/src
 		# make
-		#./output
-		>count-areas <file full Location from root> --shape <Height>,<Width> 	//after typing width press enter make sure the spaces and value are correct
+		#./count-areas <file full Location from root> --shape <Height>,<Width>
+
+		>count-areas <file full Location from root> --shape <Height>,<Width> 	/
 			eg:count-areas /home/lokesh/Desktop/Projects/ColorClusteringCpp/data/sample.bin --shape 256,256
 	if everything is perfect output will be generated or else code will exit.
 

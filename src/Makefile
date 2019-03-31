@@ -1,5 +1,5 @@
 all:
-	g++ Main.cpp List2Dynamic.cpp List1Dynamic.cpp ColorClustering.cpp -o output
+	g++ Main.cpp List2Dynamic.cpp List1Dynamic.cpp ColorClustering.cpp -o count-areas
 
 output: Main.o List1Dynamic.o List2Dynamic.o ColorClustering.o
 	g++ Main.o List1Dynamic.o List2Dynamic.o ColorClustering.o -o bin/output
